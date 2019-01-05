@@ -7,9 +7,6 @@ import model
 import sys
 import logging
 
-app.logger.addHandler(logging.StreamHandler(sys.stdout))
-app.logger.setLevel(logging.ERROR)
-
 # Load in data structures
 with open("data/wordList.txt", "rb") as fp:
     wordList = pickle.load(fp)
@@ -72,3 +69,6 @@ def main():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
