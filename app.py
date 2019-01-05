@@ -60,7 +60,7 @@ app = Flask(__name__, template_folder='./')
 def prediction():
     print(request)
     print(request.data)
-    print(request.stream)
+    print(request.json)
     response =  pred(str(request.json['message']))
     return jsonify(response)
 
