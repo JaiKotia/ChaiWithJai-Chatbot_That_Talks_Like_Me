@@ -4,6 +4,12 @@ import tensorflow as tf
 from flask import Flask, jsonify, render_template, request
 import model
 
+import sys
+import logging
+
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
+
 # Load in data structures
 with open("data/wordList.txt", "rb") as fp:
     wordList = pickle.load(fp)
