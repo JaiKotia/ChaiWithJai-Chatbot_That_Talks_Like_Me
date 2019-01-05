@@ -58,7 +58,9 @@ app = Flask(__name__, template_folder='./')
 
 @app.route('/prediction', methods=['POST', 'GET'])
 def prediction():
-    print('HIII')
+    print(request)
+    print(request.data)
+    print(request.stream)
     response =  pred(str(request.json['message']))
     return jsonify(response)
 
