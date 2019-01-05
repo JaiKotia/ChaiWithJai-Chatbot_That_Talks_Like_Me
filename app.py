@@ -62,9 +62,7 @@ def prediction():
     print(request.data)
     print(request.form)
     print(request.form['message'])
-    print(request.json)
-    print(request.json['message'])
-    response =  pred(str(request.json['message']))
+    response =  pred(str(request.form['message']))
     return jsonify(response)
 
 @app.route('/')
