@@ -32,6 +32,7 @@ def idsToSentence(ids, wList):
     listOfResponses = [i for i in listOfResponses if i]
     listOfResponses = list(set(listOfResponses))
     #chosenString = ''.join(listOfResponses)
+    print(listOfResponses)
     chosenString = listOfResponses[0]
     #chosenString = max(listOfResponses, key=len)
     return chosenString

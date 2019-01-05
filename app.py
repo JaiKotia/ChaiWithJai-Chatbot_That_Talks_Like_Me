@@ -44,11 +44,15 @@ zeroVector = np.zeros((1), dtype='int32')
 
 def pred(inputString):
     inputVector = model.getTestInput(inputString, wordList, maxEncoderLength)
+    print(inputVector)
     feedDict = {encoderInputs[t]: inputVector[t] for t in range(maxEncoderLength)}
+    print(feedDict)
     feedDict.update({decoderLabels[t]: zeroVector for t in range(maxDecoderLength)})
     feedDict.update({decoderInputs[t]: zeroVector for t in range(maxDecoderLength)})
     feedDict.update({feedPrevious: True})
+    print(feedDict)
     ids = (sess.run(decoderPrediction, feed_dict=feedDict))
+    print(ids)
     return model.idsToSentence(ids, wordList)
 
 # webapp
@@ -57,10 +61,12 @@ app = Flask(__name__, template_folder='./')
 
 @app.route('/prediction', methods=['POST', 'GET'])
 def prediction():
+    '''
     print(request)
     print(request.data)
     print(request.form)
     print(request.form['message'])
+    '''
     response =  pred(str(request.form['message']))
     return jsonify(response)
 
