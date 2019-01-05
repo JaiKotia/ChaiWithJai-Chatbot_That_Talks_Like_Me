@@ -60,7 +60,10 @@ app = Flask(__name__, template_folder='./')
 def prediction():
     print(request)
     print(request.data)
+    print(request.form)
+    print(request.form['message'])
     print(request.json)
+    print(request.json['message'])
     response =  pred(str(request.json['message']))
     return jsonify(response)
 
