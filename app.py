@@ -46,7 +46,6 @@ def pred(inputString):
     inputVector = model.getTestInput(inputString, wordList, maxEncoderLength)
     print(inputVector)
     feedDict = {encoderInputs[t]: inputVector[t] for t in range(maxEncoderLength)}
-    print(feedDict)
     feedDict.update({decoderLabels[t]: zeroVector for t in range(maxDecoderLength)})
     feedDict.update({decoderInputs[t]: zeroVector for t in range(maxDecoderLength)})
     feedDict.update({feedPrevious: True})

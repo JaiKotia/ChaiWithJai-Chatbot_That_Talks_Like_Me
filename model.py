@@ -33,6 +33,9 @@ def idsToSentence(ids, wList):
     listOfResponses = list(set(listOfResponses))
     #chosenString = ''.join(listOfResponses)
     print(listOfResponses)
-    chosenString = listOfResponses[0]
+    if not listOfResponses:
+        chosenString = 'Nothing to say'
+    else:
+        chosenString = listOfResponses[0]
     #chosenString = max(listOfResponses, key=len)
     return chosenString
