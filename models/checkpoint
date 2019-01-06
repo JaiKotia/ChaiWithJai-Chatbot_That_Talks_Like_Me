@@ -1,6 +1,2 @@
-model_checkpoint_path: "pretrained_seq2seq.ckpt-38500"
-all_model_checkpoint_paths: "pretrained_seq2seq.ckpt-36500"
-all_model_checkpoint_paths: "pretrained_seq2seq.ckpt-37000"
-all_model_checkpoint_paths: "pretrained_seq2seq.ckpt-37500"
-all_model_checkpoint_paths: "pretrained_seq2seq.ckpt-38000"
-all_model_checkpoint_paths: "pretrained_seq2seq.ckpt-38500"
+model_checkpoint_path: "pretrained_seq2seq.ckpt-39000"
+all_model_checkpoint_paths: "pretrained_seq2seq.ckpt-39000"
