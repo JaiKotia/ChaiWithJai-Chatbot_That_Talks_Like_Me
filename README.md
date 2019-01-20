@@ -14,4 +14,4 @@ We use this model to map the sentences in ConversationData to the Word Vectors c
 ## Flask Server
 We use a flask server deployed using Heroku where we host the chatbot. It takes a input sentence and generates a likely response. We use the model output from Seq2Seq to generate responses from our chatbot. (Note: The current deployed model has been trained for only 88,000 steps. Further training, upto 500,000 would ensure better results.)
 
-### Check out the live demo at: https://evening-temple-33627.herokuapp.com/
+### Check out the live demo at: https://evening-temple-33627.herokuapp.com
