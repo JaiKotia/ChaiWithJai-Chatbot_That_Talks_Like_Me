@@ -1,6 +1,6 @@
 # Chai With Jai
 
-A chatbot that has been trained on my whatsapp chat data to learn to respond to text messages like I do.
+A chatbot that has been trained on my whatsapp chat data to learn to respond to text messages like I do. Project tutorial that I  followed: https://adeshpande3.github.io/adeshpande3.github.io/How-I-Used-Deep-Learning-to-Train-a-Chatbot-to-Talk-Like-Me
 
 ## Whatsapp Chat Data Processing
 Script that takes exported Whatsapp chat data and generates a dictionary of responses and replies. It outputs WordList and ConversationData files which will be used ahead.
